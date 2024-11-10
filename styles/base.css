@@ -32,6 +32,24 @@ header h1 {
     font-size: 2em;
 }
 
+/* Menú estilo hamburguesa */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos de menú en vista de escritorio */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -54,6 +72,32 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #0b486b;
+}
+
+/* Estilos para la vista móvil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #3b3b3b;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
 
 main {
@@ -130,10 +174,6 @@ footer {
 
 @media (max-width: 768px) {
     .profile-container {
-        flex-direction: column;
-    }
-
-    nav ul {
         flex-direction: column;
     }
 

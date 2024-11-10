@@ -18,8 +18,10 @@
             <img src="images/profile.webp" alt="Alejandro">
             <h1>Alejandro Villamar</h1>
         </div>
+        <!-- Botón de menú hamburguesa -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="chamber.html">Chamber</a></li>
                 <li><a href="https://github.com/Alejogvy">GitHub Profile</a></li>
@@ -27,6 +29,13 @@
             </ul>
         </nav>
     </header>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+    
     <main>
         <section class="coursework">
             <h2>Course Work</h2>
