@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script src="getdates.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 <body>
     <header>
@@ -18,7 +19,6 @@
             <img src="images/profile.webp" alt="Alejandro">
             <h1>Alejandro Villamar</h1>
         </div>
-        <!-- Botón de menú hamburguesa -->
         <button class="hamburger" onclick="toggleMenu()">☰</button>
         <nav>
             <ul id="nav-menu">
@@ -29,12 +29,6 @@
             </ul>
         </nav>
     </header>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('nav-menu');
-            menu.classList.toggle('active');
-        }
-    </script>
     
     <main>
         <section class="coursework">
@@ -55,22 +49,26 @@
         <section class="certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="buttons">
-                <button>All</button>
-                <button>CSE</button>
-                <button>WDD</button>
-                <button>GS</button>
+                <button onclick="filterCourses('all')">All</button>
+                <button onclick="filterCourses('CSE')">CSE</button>
+                <button onclick="filterCourses('WDD')">WDD</button>
+                <button onclick="filterCourses('GS')">GS</button>
             </div>
-            <div class="courses">
-                <button class="cse">CSE 210</button>
-                <button class="gs">GS 170</button>
-                <button class="wdd">WDD 231</button>
-            </div>
+            <div class="courses" id="courseList"></div>
+            <p>Total Credits Required: <span id="totalCredits">0</span></p>
         </section>
     </main>
+    
     <footer>
         <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
         <p id="lastModified"></p>
     </footer>
-    <script src="scripts/getdates.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
