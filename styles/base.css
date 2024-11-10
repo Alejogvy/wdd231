@@ -1,49 +1,54 @@
-/* General body styling */
+/* General styling */
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 150px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #f5f5f5;
     color: #333;
 }
 
-/* Header */
 header {
     background-color: #0b486b;
     color: #fff;
-    padding: 0px;
     text-align: center;
-    border-bottom: 0px solid #0b486b;
+    padding: 20px;
+}
+
+header .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
 
 header h1 {
-    margin: 50px;
-    padding: 0px;
-    position: relative;
-    bottom: -25px;
-    font-size: 44px;
+    font-size: 2em;
 }
 
-/* Navigation */
 nav ul {
     list-style-type: none;
-    border: 20px solid #3b3b3b;
-    font-size: 20px;
     padding: 0;
-    margin: 0;
-    text-align: center;
+    margin: 20;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
     background-color: #3b3b3b;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 100px;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -51,133 +56,92 @@ nav ul li a:hover {
     color: #0b486b;
 }
 
-/* Main section */
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.coursework, .location, .certificate {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 50px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.coursework h2, .location h2, .certificate h2 {
+    background-color: #0b486b;
+    color: #fff;
     padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
 }
 
-.left {
-    background-color: #fff;
-    border: 1px solid #ddd;
+.location img {
+    width: 100%;
     border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    min-width: 300px;
+    margin-top: 10px;
 }
 
-.right {
+.certificate .buttons {
     display: flex;
-    flex-direction: column;
-    flex: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    min-width: 300px;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
 }
 
-.left {
-    margin-right: 10px;
-}
-
-.right {
-    margin-left: 10px;
-}
-
-.right ul {
-    text-align: justify;
-    margin-top: 200px;
-}
-
-.left img, .right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.right h2 {
+.certificate .buttons button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
     color: #fff;
-    text-align: center;
-    background: #0b486b; 
-    font-weight: bold; 
-    padding: 15px; 
-    border: 2px solid #0b486b; 
-    border-radius: 6px;
+    font-weight: bold;
 }
 
-/* Container of the left section */
-.left {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-}
-
-/* Container for image and text layout */
-.profile-container, .flag-container {
+.certificate .courses {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
-.profile-container img, .flag-container img {
-    max-width: 150px;
-    margin: 0 20px;
-    border-radius: 8px;
-}
-
-.left h2 {
+.certificate .courses button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8b4513;
     color: #fff;
-    text-align: center;
-    background: #0b486b; 
-    font-weight: bold; 
-    padding: 15px; 
-    border: 2px solid #0b486b; 
-    border-radius: 6px;
-}
-.title h2 {
-    all:inherit;
-    text-align: center;
-    font-size: x-large;
-    font-size: 30px;
-    padding: 5px;
-    border-bottom: 1px solid #3b3b3b;
+    font-weight: bold;
+    width: 90px;
 }
 
-/* Profile image to the right */
-.profile-container {
-    flex-direction: row-reverse;
-}
-
-/* Image of the flag on the left side */
-.flag-container {
-    flex-direction: row;
-}
-
-/* Footer */
 footer {
     background-color: #0b486b;
     color: #fff;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    font-size: 0.9em;
 }
 
-footer p {
-    margin: 5px 0;
-}
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+    }
 
-footer span {
-    font-weight: bold;
-}
+    nav ul {
+        flex-direction: column;
+    }
 
-footer p#lastModified {
-    color: #f5f5f5;
+    .coursework, .location, .certificate {
+        width: 90%;
+    }
+
+    .certificate .courses button {
+        width: 100%;
+    }
 }

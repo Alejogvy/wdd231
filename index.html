@@ -1,71 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="WDD 231 - Dynamic Web Fundamentals">
-        <meta name="author" content="Alejandro Villamar">
-        <title>WDD 231 - Web Frontend Development I - Alejandro Villamar</title>
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <script src="getdates.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <div class="profile-container">
-                <img src="images/profile.webp" alt="Alejandro">
-                <h1>Alejandro Villamar</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 231 - Dynamic Web Fundamentals">
+    <meta name="author" content="Alejandro Villamar">
+    <title>WDD 231 - Web Frontend Development I - Alejandro Villamar</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="images/profile.webp" alt="Alejandro">
+            <h1>Alejandro Villamar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/Alejogvy">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/alejogvy" target="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="coursework">
+            <h2>Course Work</h2>
+            <ul>
+                <li>• Item 1</li>
+                <li>• Item 2</li>
+                <li>• Item 3</li>
+            </ul>
+        </section>
+        
+        <section class="location">
+            <h2>Quito, Ecuador</h2>
+            <img src="images/ecuador.webp" alt="Historic Center Of Quito">
+            <p>Historic Center Of Quito</p>
+        </section>
+    </main>
+    <main>
+        <section class="certificate">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="buttons">
+                <button>All</button>
+                <button>CSE</button>
+                <button>WDD</button>
+                <button>GS</button>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="chamber.html">Chamber</a></li>
-                    <li><a href="https://github.com/Alejogvy">GitHub Profile</a></li>
-                    <li><a href="https://www.linkedin.com/in/alejogvy" target="LinkedIn">LinkedIn</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="right">
-                <h2>Web Dev Resources</h2>
-                <ul>
-                    <li><a href="https://example.com/resource1" target="1">Dev.to Comunity</a></li>
-                    <li><a href="https://example.com/resource2" target="2">Samshing Magazine</a></li>
-                    <li><a href="https://example.com/resource3" target="3">CSS Tricks</a></li>
-                    <li><a href="https://example.com/resource4" target="4">W3 Schools</a></li>
-                    <li><a href="https://example.com/resource5" target="5">Udemy</a></li>
-                    <li><a href="https://example.com/resource6" target="6">Lorem Picsum Image Placeholder</a></li>
-                </ul>
-            </section>
-
-            <section>
-            <div class="title">
-                <h2>Quito, Ecuador</h2>
+            <div class="courses">
+                <button class="cse">CSE 210</button>
+                <button class="gs">GS 170</button>
+                <button class="wdd">WDD 231</button>
             </div>
-            <div class="flag-container">
-                <img src="images/flag_ec.webp" alt="Ecuador">
-                <p>Jesus.</p>
-            </div>
-            </section>
-            
-            <section class="center">
-                <h2>Web Dev Resources</h2>
-                <ul>
-                    <li><a href="https://example.com/resource1" target="1">Dev.to Comunity</a></li>
-                    <li><a href="https://example.com/resource2" target="2">Samshing Magazine</a></li>
-                    <li><a href="https://example.com/resource3" target="3">CSS Tricks</a></li>
-                    <li><a href="https://example.com/resource4" target="4">W3 Schools</a></li>
-                    <li><a href="https://example.com/resource5" target="5">Udemy</a></li>
-                    <li><a href="https://example.com/resource6" target="6">Lorem Picsum Image Placeholder</a></li>
-                </ul>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
-            <p id="lastModified"></p>
-        </footer>
-        <script src="scripts/getdates.js"></script>
-    </body>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+</body>
 </html>
