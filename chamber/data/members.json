@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Universidad de los Hemisferios",
+        "address": "Iñaquito Alto, Paseo de la Universidad No. 300 y Juan Díaz",
+        "phone": "+593-98-728-3746",
+        "website": "https://www.uhemisferios.edu.ec/",
+        "image": "images/uh.png",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Fiscalia General del Estado",
+        "address": "Juan León Mera N19-36 y Av. Patria",
+        "phone": "+593-02-3985-800",
+        "website": "https://www.fiscalia.gob.ec/",
+        "image": "images/fge.png",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Universidad Tecnológica Equinoccial",
+        "address": "456 Elm St, Townsville",
+        "phone": "+593-02-299-0800",
+        "website": "https://www.ute.edu.ec/",
+        "image": "images/ute.png",
+        "membershipLevel": 1
+    },
+    {
+        "name": "EcuaAuto",
+        "address": "Río Coca E8-73 y París",
+        "phone": "+593-99-140-2100",
+        "website": "https://www.ecuaautochevrolet.ec/",
+        "image": "images/ea.png",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Sportika",
+        "address": "Quito, Ecuador",
+        "phone": "+593-99-056-0989",
+        "website": "https://www.sportika.org/",
+        "image": "images/sp.png",
+        "membershipLevel": 2
+    }
+]
