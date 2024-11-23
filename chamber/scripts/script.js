@@ -36,3 +36,19 @@ document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
 fetchMembers();
+
+
+// Set the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Set the last modified date in the footer
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// Toggle between grid and list views
+const toggleView = document.getElementById("toggleView");
+const membersSection = document.getElementById("members");
+
+toggleView.addEventListener("click", () => {
+    membersSection.classList.toggle("grid");
+    membersSection.classList.toggle("list");
+});
