@@ -101,3 +101,128 @@ footer {
 .spotlight-item h3 {
     color: #0074D9;
 }
+
+/* Events Section */
+#events {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+#events h2 {
+    color: #0074D9;
+    text-align: center;
+}
+
+#events ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#events li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Weather Section */
+#weather {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#weather h2 {
+    color: #0074D9;
+    margin-bottom: 15px;
+}
+
+#current-weather {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#forecast {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#forecast li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+/* Featured Members Section */
+#featured-members {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+#featured-members h2 {
+    color: #0074D9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#members-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.member-card h3 {
+    color: #0074D9;
+    margin-bottom: 10px;
+}
+
+.member-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+#members-directory {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e0e0e0;
+}
+
+#members-directory h2 {
+    color: #0074D9;
+    text-align: center;
+}
+
+.directory-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

@@ -37,6 +37,22 @@
         "phone": "+593-99-056-0989",
         "website": "https://www.sportika.org",
         "image": "images/sp.png",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Megamaxi",
+        "address": "Quito, Ecuador",
+        "phone": "+593-1800-787-376",
+        "website": "https://www.supermaxi.com/",
+        "image": "images/mm.png",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Sportika",
+        "address": "Quito, Ecuador",
+        "phone": "+593-95-874-9233",
+        "website": "https://www.paccari.com/",
+        "image": "images/pa.png",
         "membershipLevel": 2
     }
 ]
