@@ -16,27 +16,58 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Chamber of Commerce Directory</title>
-    <script defer src="join.js"></script>
 </head>
 <body>
     <header>
         <h1>Thank You for Joining!</h1>
     </header>
-
     <main>
-        <section>
-            <h2>Submission Details</h2>
-            <ul>
-                <li>First Name: <span id="firstName"></span></li>
-                <li>Last Name: <span id="lastName"></span></li>
-                <li>Email: <span id="email"></span></li>
-                <li>Mobile Phone: <span id="phone"></span></li>
-                <li>Business Name: <span id="businessName"></span></li>
-                <li>Submitted On: <span id="timestamp"></span></li>
-            </ul>
-        </section>
+        <h2>Here is your submitted information:</h2>
+        <ul>
+            <li>First Name: <span id="firstName"></span></li>
+            <li>Last Name: <span id="lastName"></span></li>
+            <li>Organizational Title: <span id="orgTitle"></span></li>
+            <li>Email: <span id="email"></span></li>
+            <li>Mobile Phone: <span id="phone"></span></li>
+            <li>Business Name: <span id="businessName"></span></li>
+            <li>Membership Level: <span id="membership"></span></li>
+            <li>Business Description: <span id="description"></span></li>
+            <li>Submitted On: <span id="timestamp"></span></li>
+        </ul>
     </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Chamber of Commerce</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set the current year in the footer
+            document.getElementById('year').textContent = new Date().getFullYear();
 
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Map form fields to corresponding IDs in the page
+            const fields = {
+                firstName: 'firstName',
+                lastName: 'lastName',
+                orgTitle: 'orgTitle',
+                email: 'email',
+                phone: 'phone',
+                businessName: 'businessName',
+                membership: 'membership',
+                description: 'description',
+                timestamp: 'timestamp'
+            };
+
+            // Populate the fields with the data from the URL
+            for (const [key, id] of Object.entries(fields)) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.textContent = urlParams.get(key) || 'Not provided';
+                }
+            }
+        });
+    </script>
     <footer>
         <p>Contact us: info@quito-chamber.com | +593 99-678-6909</p>
         <p>&copy; <span id="year"></span> | WDD 231 | Last modified: <span id="lastModified"></span></p>

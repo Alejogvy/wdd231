@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Chamber of Commerce Directory</title>
-    <script defer src="join.js"></script>
 </head>
 <body>
     <header>
@@ -34,69 +33,48 @@
     <main>
         <section class="form-section">
             <h2>Membership Application</h2>
-            <form method="get" action="thankyou.html">
-                <!-- Applicant First Name -->
-                <label>
-                    First Name:
-                    <input type="text" name="firstName" required title="Enter your first name" autocomplete="given-name">
-                </label>
-
-                <!-- Applicant Last Name -->
-                <label>
-                    Last Name:
-                    <input type="text" name="lastName" required title="Enter your last name" autocomplete="family-name">
-                </label>
-
-                <!-- Organizational Title -->
-                <label>
-                    Organizational Title:
-                    <input type="text" name="orgTitle" title="Enter your title within the organization" 
-                           autocomplete="organization-title" pattern="[A-Za-z\s-]{7,}">
-                </label>
-
-                <!-- Email -->
-                <label>
-                    Email:
-                    <input type="email" name="email" required title="Enter your email" 
-                           autocomplete="email" placeholder="example@domain.com">
-                </label>
-
-                <!-- Mobile Number -->
-                <label>
-                    Mobile Phone:
-                    <input type="tel" name="phone" required title="Enter your phone number" autocomplete="tel">
-                </label>
-
-                <!-- Business Name -->
-                <label>
-                    Business/Organization Name:
-                    <input type="text" name="businessName" required title="Enter your organization name" 
-                           autocomplete="organization">
-                </label>
-
-                <!-- Membership Level -->
-                <label>
-                    Membership Level:
-                    <select name="membershipLevel" required>
-                        <option value="NP">Non-Profit Membership (Free)</option>
-                        <option value="Bronze">Bronze Membership</option>
-                        <option value="Silver">Silver Membership</option>
-                        <option value="Gold">Gold Membership</option>
-                    </select>
-                </label>
-
-                <!-- Business Description -->
-                <label>
-                    Business Description:
-                    <textarea name="businessDescription" title="Describe your business"></textarea>
-                </label>
-
-                <!-- Timestamp -->
-                <input type="hidden" name="timestamp" id="timestamp">
-
-                <!-- Submit Button -->
-                <input type="submit" value="Submit Application">
+            <form action="thankyou.html" method="GET">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="Enter your first name">
+    
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Enter your last name">
+    
+                <label for="orgTitle">Organizational Title:</label>
+                <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title" 
+                       title="Enter your organizational title (only letters, spaces, and hyphens)" 
+                       pattern="[a-zA-Z\s\-]{7,}" placeholder="Example: Marketing Manager">
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email" title="Enter your email address" placeholder="example@example.com">
+    
+                <label for="phone">Mobile Phone:</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" title="Enter your mobile phone number">
+    
+                <label for="businessName">Business/Organization Name:</label>
+                <input type="text" id="businessName" name="businessName" required autocomplete="organization" title="Enter your organization name">
+    
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership" title="Select your membership level">
+                    <option value="NP">NP Membership (No Fee)</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+    
+                <label for="description">Business Description:</label>
+                <textarea id="description" name="description" title="Describe your business or organization"></textarea>
+    
+                <input type="hidden" id="timestamp" name="timestamp" value="">
+                <button type="submit">Submit</button>
             </form>
+            <script>
+                // Set the hidden timestamp field with the current date and time
+                document.getElementById('timestamp').value = new Date().toISOString();
+        
+                // Set the current year in the footer
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>         
         </section>
 
         <!-- Membership Cards -->
