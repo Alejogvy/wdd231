@@ -1,3 +1,9 @@
+// Display copyright year and last modified date
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+fetchMembers();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Set current timestamp
     const timestampField = document.getElementById('timestamp');
@@ -34,14 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-// Display copyright year and last modified date
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
-
-fetchMembers();
-
 
 document.addEventListener('DOMContentLoaded', () => {
     // Set current year in footer
