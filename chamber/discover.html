@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Discover Quito Chamber of Commerce">
+    <meta name="description" content="Explore the attractions, events, and local businesses supported by the Quito Chamber of Commerce.">
+    <meta name="author" content="Alejandro Villamar">
+    <meta property="og:title" content="Discover Quito Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://img.icons8.com/emoji/48/globe-showing-americas-emoji.png">
+    <meta property="og:url" content="https://alejogvy.github.io/wdd231/chamber/discover.html">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-globo-americas-16.png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Discover Quito - Chamber of Commerce</title>
+</head>
+<body>
+    <header>
+        <h1>Discover Quito</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="discover.html" class="active">Discover</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main class="discover-layout">
+
+        <aside>
+            <h2>Welcome Back!</h2>
+            <p id="visitorMessage"></p>
+            <h3>Upcoming Events</h3>
+            <ul>
+                <li>Business Networking Meetup - Jan 15</li>
+                <li>Chamber Awards Gala - Feb 20</li>
+                <li>Small Business Expo - Mar 5</li>
+            </ul>
+            <h3>Quito at a Glance</h3>
+            <p>Population: 2.8 million</p>
+            <p>Elevation: 2,850 m</p>
+            <p>Time Zone: GMT-5</p>
+        </aside>
+
+        <section class="gallery">
+            <h2>Gallery of Local Attractions</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img data-src="images/plaza.webp" alt="Plaza Grande" loading="lazy">
+                    <figcaption>Plaza Grande</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/panecillo.webp" alt="El Panecillo" loading="lazy">
+                    <figcaption>El Panecillo</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/mundo.webp" alt="Mitad del Mundo" loading="lazy">
+                    <figcaption>Mitad del Mundo</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/ronda.webp" alt="La Ronda" loading="lazy">
+                    <figcaption>La Ronda</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/basilica.webp" alt="Basílica del Voto Nacional" loading="lazy">
+                    <figcaption>Basílica del Voto Nacional</figcaption>
+                </figure>
+                <figure>
+                    <img data-src="images/teleferico.webp" alt="Teleférico" loading="lazy">
+                    <figcaption>Teleférico</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Quito Chamber of Commerce</p>
+    </footer>
+    <script>
+        // Set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Visitor message logic
+        const visitorMessage = document.getElementById('visitorMessage');
+        const lastVisit = localStorage.getItem('lastVisit');
+        const now = Date.now();
+
+        if (!lastVisit) {
+            visitorMessage.textContent = "Welcome! Let us know if you have any questions.";
+        } else {
+            const daysSinceLastVisit = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+            if (daysSinceLastVisit < 1) {
+                visitorMessage.textContent = "Back so soon! Awesome!";
+            } else if (daysSinceLastVisit === 1) {
+                visitorMessage.textContent = "You last visited 1 day ago.";
+            } else {
+                visitorMessage.textContent = `You last visited ${daysSinceLastVisit} days ago.`;
+            }
+        }
+
+        localStorage.setItem('lastVisit', now);
+
+        // Lazy loading images
+        document.addEventListener("DOMContentLoaded", function () {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            lazyImages.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        });
+    </script>
+    <footer>
+        <p>Contact us: info@quito-chamber.com | +593 99-678-6909</p>
+        <p>&copy; <span id="year"></span> | WDD 231 | Last modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/script.js" defer></script
+</body>
+</html>
