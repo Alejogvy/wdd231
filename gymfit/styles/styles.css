@@ -1,0 +1,53 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    background-color: #FFC107;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #000;
+    color: #FFC107;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section Styling */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Headings */
+section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    color: #000;
+    border-bottom: 2px solid #FFC107;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #FFC107;
+}

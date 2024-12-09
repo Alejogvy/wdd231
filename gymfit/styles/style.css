@@ -1,10 +1,10 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    font-family: 'Roboto', sans-serif;
     background-color: #000;
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
     margin: 0;
     padding: 0;
+    height: 40%;
 }
 
 header {
@@ -109,6 +109,15 @@ th, td {
     color: #fff;
 }
 
+.content{
+    min-height:100%;
+    margin:0 auto -142px;
+}
+    
+.empty_space{
+    height:90px;
+}
+
 footer {
     text-align: center;
     background-color: #ffcc00;
@@ -127,6 +136,27 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.hero {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 10px 10px;
+    color: #000000;
+  }
+  
+  .hero img {
+    flex: content;
+    max-width: 10%;
+  }
+  
+  .hero h2 {
+    margin: 0;
+    font-size: 2.5em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+  }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -147,3 +177,4 @@ footer a:hover {
         width: 90%;
     }
 }
+
