@@ -33,8 +33,9 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Highlight */
 nav ul li a:hover {
-    color: #FFD700; /* Highlight */
+    color: #FFD700;
 }
 
 footer {
