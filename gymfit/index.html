@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Quito Chamber of Commerce">
+    <meta name="title" content="Achieve your goals with Gym Fit">
     <meta name="description" content="Welcome to the page for tracking gym users.">
     <meta name="author" content="Alejandro Villamar">
     <meta property="og:title" content="GYM FIT">
@@ -51,6 +51,31 @@
             <input type="text" id="goals" placeholder="Fitness Goals">
             <button type="submit">Register</button>
         </form>
+        <a href="registration.html">View Registered Users</a>
+
+        <script>
+            // Save user data in localStorage
+            document.getElementById('registrationForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const membership = document.getElementById('membership').value;
+    
+                // Get existing users from localStorage or initialize empty array
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+    
+                // Add new user
+                users.push({ name, email, membership });
+    
+                // Save back to localStorage
+                localStorage.setItem('users', JSON.stringify(users));
+    
+                alert('User registered successfully!');
+                this.reset(); // Clear form
+            });
+        </script>
+        
     </section>
     <div class="content"></div>
     <div class="empty_space"></div>

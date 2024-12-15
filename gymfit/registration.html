@@ -14,28 +14,28 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <title>Gym Management Page</title>
+    <title>Registered Users</title>
 </head>
 <body>
-    <header>
-        <h1>GYM FIT</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Welcome</a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="weather.html">Weather</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-    <section id="weather">
-        <h2>Weather in Your City Quito, Ecuador</h2>
-        <div id="weatherInfo"></div>
-        <p id="current-weather">Loading current weather...</p>
-            <ul id="forecast">
-    </section>
-    </main>
+    <h1>Registered Users</h1>
+    <ul id="userList"></ul>
+    <a href="index.html">Back to Registration</a>
+
+    <script>
+        // Retrieve users from localStorage and display them
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const userList = document.getElementById('userList');
+
+        if (users.length > 0) {
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = `Name: ${user.name}, Email: ${user.email}, Membership: ${user.membership}`;
+                userList.appendChild(li);
+            });
+        } else {
+            userList.textContent = 'No users registered yet.';
+        }
+    </script>
     <footer>
         <p>Contact us: info@gym-fit.com | +593 99-678-6909</p>
         <p>&copy; <span id="year"></span> | WDD 231 | Last modified: <span id="lastModified"></span></p>
